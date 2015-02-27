@@ -38,8 +38,7 @@ The objective of this documents is to take notes in order to have a trace or mem
 		1) the idea of agile is to get things installed faster, they wanna get some sort of benefits faster. In Waterfall I'm going through my requirements, my design, build... and then in the end install all in one go. 
 		2) The management of it: in Agile, the scope may vary but the time and cost don't. In waterfall, scope is sacred and you then work out the time and cost.
 	- How to prevent Scope Creep? (Customer adds more tasks) 1) Train every member of your project team on the concept of scope creep: what it is? and how to control it. 2) Send out limits for your project.
-	
-	- Ever said no to a managing a project? 
+	- Ever said no to managing a project? 
 	- How do I advance in my career as a project manager? Do project management well. Ask your Senior Manager about his job and how he got there.
 	- Future trends in PM? The variety of communication tools: video conference, facebook, sharepoint... and taking advantage of the capabilities it give us as a project management community.
 	
