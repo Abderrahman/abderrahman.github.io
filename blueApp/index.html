@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Hello Strapdown</title>
+<title>BlueApp</title>
 <style type="text/css">
 	span.str{color : #000;}
 </style>
@@ -205,10 +205,56 @@ The objective of this documents is to take notes in order to have a trace or mem
 	05. Perforce
 	06. Microsoft Team Foundation Server (TFS)
 	07. Git (The most important in my case)
+	Take a clone of a remote repository and run git branch -a (to show all the branches git knows about). It will probably look something like this:
+		|----------------------------------------
+		|* master
+		|remotes/origin/HEAD -> origin/master
+		|remotes/origin/master
+		|----------------------------------------
+		- Here, **master** is a branch in the local repository. 
+		- remotes/origin/master is a branch named **master** on the remote named **origin**. You can also refer to it as origin/master
+		- remotes/origin/HEAD is the default branch for the remote named **origin**. This lets you simply say origin instead of origin/master.
 	08. Mercurial
 		cmd> hg --version
 		most command are similar to gits
 	Conclusion
+
+## CodeSchool - Mastering Github
+	LEVEL 1
+		Different Levels of Configuration
+			--local : to set config for a single repo
+			--global : to set config for your user
+			--system : to set config for all users
+		Examples: set local email if using a different (personal) github account other then the one used for your company
+			$ git config --local user.email ab.hbabi@gmail.com
+		List all your global configurations:
+			$ git config --global --list
+		Some useful configurations:
+			$ git config --global push.defaults simple (push the current branch up to github)
+		Default all new branches to fetch then rebase
+			$ git config --global pull.rebase true (git pull = git fetch + git merge && git pull --rebase = git fetch + git rebase)
+		Aliases
+			$ git config --global alias.s "status -s"
+			$ git config --global alias.lg "log --oneline --decorate --all  --graph"
+		Section 2: forking and cloning
+		Section 3: Submitting a pull request
+		Section 4: Updating your fork
+			$ git remote add upstream <path_to_repo>
+
+
+## Struts 2 Tutorial 02
+	02. Introduction to Struts 2
+	The Struts 2 MVC Architecture is composed of:
+		- Interceptors: job: get request parameters (Controller)
+		- A Struts XML file 
+		- Action classes: business classes (Model)
+		- JSP: Tag librairies (View)
+	03. Setting Up
+		1. Download the full distribution from struts.apache.org
+		2. Create a dynamic web project
+		3. Project Properties of the project -> Java Build Path -> Librairies -> New User Library -> Create a User Library and call it "Struts 2" -> Add to it librairies from the Strust2/lib forlder
+		4. Project Properties of the project -> Deployment Assembly -> Add Struts2 => WEB-INF/lib (when we deploy the app, the librairies will be copied to the lib folder)
+	04. Setting Up
 	
 </xmp>
 
