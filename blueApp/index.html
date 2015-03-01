@@ -242,7 +242,8 @@ The objective of this documents is to take notes in order to have a trace or mem
 			$ git remote add upstream <path_to_repo>
 
 
-## Struts 2 Tutorial 02
+## Struts 2 - Java Brains
+	01. Introduction to MVC
 	02. Introduction to Struts 2
 	The Struts 2 MVC Architecture is composed of:
 		- Interceptors: job: get request parameters (Controller)
@@ -252,10 +253,53 @@ The objective of this documents is to take notes in order to have a trace or mem
 	03. Setting Up
 		1. Download the full distribution from struts.apache.org
 		2. Create a dynamic web project
-		3. Project Properties of the project -> Java Build Path -> Librairies -> New User Library -> Create a User Library and call it "Struts 2" -> Add to it librairies from the Strust2/lib forlder
+		3. Project Properties of the project -> Java Build Path -> Librairies -> Add Library -> Add User Library -> Create a User Library and call it "Struts 2" -> Add to it librairies from the Strust2/lib forlder
 		4. Project Properties of the project -> Deployment Assembly -> Add Struts2 => WEB-INF/lib (when we deploy the app, the librairies will be copied to the lib folder)
-	04. Setting Up
+	04. Writing a Struts 2 Application
+		Main components: 
+			1. Action Class: Same action class may need to show different JSPs
+				public class TutorialAction { 
+					public String execute(){ return "success";}
+				}
+			2. JSP: JSP displayed depends on the result of the method execution
+			3. Stuts 2 XML: does something similar to web.xml. It maps a URL to an action class or JSPs. Example: http://myapp/getTutorial <--> TutorialAction
+				struts.xml: 
+				<struts>
+					<package name="default" extends="struts-default">
+						<action name="getTutorial" class="com.app.action.TutorialAction">
+							<result name="success">/success.jsp</result>
+						</action>
+					</package>
+				</struts>
+			4. web.xml: add filter inside webapp tag so that tomcat don't look for servlets.
+				<filter>
+					<filter-name>stuts2</filter-name>
+					<filter-class>org.apache.struts2....</filter-class>
+				</filter>
+				<filter-mapping>
+					<filter-name>stuts2</filter-name>
+					<filter-pattern>/*</filter-pattern>
+				</filter-mapping>
+			5. Finally run server and access localhost:8080/app/getTutorial.action
+	05. Understanding Namespaces 
+		When we add a namespace to the package as in:
+			<package name="default" namespace="/tutorials" extends="struts-default">
+		then: localhost:8080/app/getTutorial.action becomes localhost:8080/app/tutorials/getTutorial.action
+		(default namespace is [/])
+	06. A Tag And A Business Service
+		For JSTL we use: <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> -- <c:out >, <c:when >, <c:if >, <c:forEach >
+		For SQL we use: <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %> -- <sql:setDataSource>, <sql:query>, <sql:update>, <sql:param>
+		but for struts we use: <%@ taglib prefix="s" uri="/struts-tags" %> -- <s:property>
+		and then we write inside the body tag: <s:property value="age" /> (age is a member of the Action class, we should specify the getter for this member in order to display it)
+	07. The ValueStack
+		
 	
+##Useful Resources
+	- This is a [Struts 2](http://www.tutorialspoint.com/struts_2/ "Struts 2 Tutorial") Tutorial.
+	- Koushks's [Java Brains](https://www.youtube.com/user/koushks/playlists) Tutorials.
+	- [Globals2i](http://www.globals2i.com/)
+
+
 </xmp>
 
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
