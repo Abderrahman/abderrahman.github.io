@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<title>BlueApp</title>
-<style type="text/css">
-	span.str{color : #000;}
-</style>
-
-<xmp theme="united" style="display:none;">
-The objective of this documents is to take notes in order to have a trace or memory of what Ive learned.
+The objective of this documents is to take notes in order to have a trace or memory of what I've learned.
 
 ## Lynda.com - Top 5 YouTube Channel Tips
 	(1) Having a website is very important for anybody who's on youtube.
@@ -14,6 +6,7 @@ The objective of this documents is to take notes in order to have a trace or mem
 	(3) SEO: wordstream.com keyword research tool
 	(4) Make playlists
 	(5) Keep an eye on other channels and the competition.
+
 	
 ## Lynda com - Foundations of Programming ~ Design Patterns
 	This lynda course offers a look inside the 7 most used design patterns, starting with "Strategy" using a duck example to illustrate this design pattern.
@@ -28,7 +21,7 @@ The objective of this documents is to take notes in order to have a trace or mem
 # Project Management
 
 ## Lynda.com - Insights from a Project Manager with Bob Mcgannon
-
+	Starting Date: 18/02/2015, Duration: 5 Days, Completion Date: 23/02/2015, Actual Completion Date: ?
 	- Most important skills are communication skills, relationship or soft skills whatever you wanna call it and risk management, the risk of miscommunication, the risk of hiring the wrong people ...
 	- What is your advice for new Project Managers? Talk to other people, try to obtain their lessons learned and don't be afraid to say I could use some help with ...
 	- PMBOK is sort of a generic description of what it takes to take a project from I have an idea to creating a business value and everything in between. What you should know for the exam is generic scenarios.
@@ -45,15 +38,16 @@ The objective of this documents is to take notes in order to have a trace or mem
 		1) the idea of agile is to get things installed faster, they wanna get some sort of benefits faster. In Waterfall I'm going through my requirements, my design, build... and then in the end install all in one go. 
 		2) The management of it: in Agile, the scope may vary but the time and cost don't. In waterfall, scope is sacred and you then work out the time and cost.
 	- How to prevent Scope Creep? (Customer adds more tasks) 1) Train every member of your project team on the concept of scope creep: what it is? and how to control it. 2) Send out limits for your project.
+	
 	- Ever said no to managing a project? 
 	- How do I advance in my career as a project manager? Do project management well. Ask your Senior Manager about his job and how he got there.
 	- Future trends in PM? The variety of communication tools: video conference, facebook, sharepoint... and taking advantage of the capabilities it give us as a project management community.
 	
-## Teamtreehouse.com - Soft Skills
-
+## teamtreehouse.com - Soft Skills
+	Starting Date: 18/02/2015, Duration: 7 Days, Completion Date: 25/02/2015, Actual Completion Date: ?
 	
 ## Lynda.com - Project Management Simplified
-
+	Starting Date: 19/02/2015, Duration: 2 Days, Completion Date: 21/02/2015, Actual Completion Date: 21/02/2015 + 1h
 	An Overview of the Process:
 	I) Defining
 		1) Define the project:
@@ -292,15 +286,101 @@ The objective of this documents is to take notes in order to have a trace or mem
 		but for struts we use: <%@ taglib prefix="s" uri="/struts-tags" %> -- <s:property>
 		and then we write inside the body tag: <s:property value="age" /> (age is a member of the Action class, we should specify the getter for this member in order to display it)
 	07. The ValueStack
-		
+		- When we're using servlets, we have a new thread for each request and data is seperated using a request object.
+		- But when using struts, new action objects are created for each request! In this case we don't need a request object because the action object is already unique. We have member variables.
+		- Action objects are stored in the value stack, which is then accessed by JSP to retrieve date.
+		- Name Resolution
 	
-##Useful Resources
+	--- make a video after finishing this course ---
+
+	
+## Useful Resources
 	- This is a [Struts 2](http://www.tutorialspoint.com/struts_2/ "Struts 2 Tutorial") Tutorial.
 	- Koushks's [Java Brains](https://www.youtube.com/user/koushks/playlists) Tutorials.
 	- [Globals2i](http://www.globals2i.com/)
+	
+##Rich Internet application
+	- A rich Internet application (RIA) is a Web application that has many of the characteristics of desktop application software, typically delivered by way of a site-specific browser, a browser plug-in, an independent sandbox, extensive use of JavaScript, or a virtual machine. Adobe Flash, JavaFX, and Microsoft Silverlight are currently the three most common platforms, with desktop browser penetration rates around 96%, 76%, and 66%, respectively (as of August 2011).
+	- Google trends shows (as of September 2012) that frameworks based on a plug-in are in the process of being replaced by HTML5/JavaScript-based alternatives
+	Plug-ins
+		Apache Flex, formerly Adobe Flex is a software development kit (SDK) for the development and deployment of cross-platform rich Internet applications based on the Adobe Flash platform.
+		JavaFX is a software platform for creating and delivering rich Internet applications (RIAs) that can run across a wide variety of connected devices
+		Microsoft Silverlight
+	HTML5/JavaScript
+		GWT
+		ExtJS
+		Vaadin is an open source Web application framework for rich Internet applications
+	Unrelated information
+	- Maven or Gradle is for building the backend
+	- Grunt (recommended) or Gulp.js is for building the frontend
+	- The Yeoman workflow comprises three types of tools for improving your productivity and satisfaction when building a web app: 
+	the scaffolding tool (yo), the build tool (Grunt, Gulp, etc) and the package manager (like Bower and npm).
+	- Major Java third-party technologies: JRockit    GNU Classpath    Kaffe    TopLink    Apache Harmony    Apache Struts    Spring framework    Hibernate    JBoss application server    Tapestry    Jazelle
 
-
-</xmp>
-
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
-</html>
+## Pluralsight - Maven Fundamentals
+	1. Introduction to Maven Fundamentals
+		What is Maven
+			- Maven is a build tool, just as ant, make, a custom written bash file... used to build source code and produce an artifact. Maven always produces an artifact for example a jar or a war or a zip file.
+			- It helps manage dependencies inside an app just as bower, composer, npm... Like when u want to use a tool like hibernate, there's one hibernate tool you need to import but it has 13 or 14 other librairies that it needs.
+			- It handles versioning and releases and can easily produce Javadocs.
+		Why do you wanna use it
+			- Transitive dependencies: Downloading a dependency with also pull other items it needs.
+			- The preferred choice for working with build tools like Jenkins
+		Ant VS. Maven
+			- Ant was developed to replace a build too called Make. It isn't a build tool as much as it is a scripting tool. You have to explicitly do everything in Ant.
+			- Maven is a full fledged build tool. A lot of implicit functionality, transitive dependencies, built around versioning, convention over configuration, 
+			**Ant** build.xml
+			<project>
+				<target name="clean">
+					<delete dir="build" />
+				</target>
+				<target name="compile">
+					<mkdir dir="build/classes" />
+					<javac srcdir="src" destdir="build/classes" />
+				</target>
+				<target name="jar">
+					...
+				</target>
+				<target name="run">
+					...
+				</target>
+			</project>
+			
+			**Maven** pom.xml
+			In this app I can do clean, compile, jar, run and it will all work because it knows from this pom file (it's what we call blackbox):
+			<project xmlns="">
+				<modelVersion>4.0.0</modelVersion>
+				<groupId>com.mycompany</groupId>
+				<artifactId>HelloWorld</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</project
+		Summary
+			- Ant is very declarative
+			- Maven follows convention over configuration model meaning: that if I follow their naming convention, things are just gonna go easier for me.
+			- Ant is maybe easier to learn, but it really is only beneficial as a scripting tool
+			- Maven is really centered around managing your entire project's lifecycle (versions, how we structure code...)
+		Demo - Hello World
+			pom.xml tags
+				- groupId is what differentiate us from other companies (com.pluralsight)
+				- artifactId is what we want to name our application (HelloWord)
+				- version (1.0-SNAPSHOT)
+				- modelVersion is the version of the xml schema structure so that maven know what he's doing (4.0.0)
+				- packaging (jar)
+			convention: 
+				- put files inside [/src/main/java/]HelloWorld.java (maven is going to compile any class underneath this directory)
+				- put test files inside /test/main/java/[project package]/HelloWorldTest.java
+			commands:
+				- mvn clean
+				- mvn compile (after you compile you get a "target" directory)
+				- mvn archetype:generate
+		
+		from maven.apache.org
+			1. Build the Project: mvn package
+			2. You may test the newly compiled and packaged JAR with the following command:
+			java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+	2. Maven Structure
+	
+	
+	
+---
+Copyright &copy; 2015 abderrahman.
